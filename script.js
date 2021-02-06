@@ -3,7 +3,7 @@ const searchBtn = document.getElementById('search-btn');
 const ingredientBox =document.getElementById('ingredient')
 const foodList = document.getElementById('food-list');
 
-
+//displaying ingredient 
 const foodsIngredient =(mealName)=>{
     ingredientBox.style.display = 'block'
     fetch("https://www.themealdb.com/api/json/v1/1/search.php?s="+mealName)
@@ -22,6 +22,7 @@ const foodsIngredient =(mealName)=>{
     } )      
 }
 
+//displaying foods template
 const displayFoods = (foods) =>{
     foodList.innerHTML='';
     ingredientBox.style.display = 'none'
@@ -39,17 +40,18 @@ const displayFoods = (foods) =>{
         foodPlate.innerHTML = `<img src="${strMealThumb}" class="foods-img img-fluid" alt="">
         <h3 class="food-names">${strMeal}</h3>`
         foodList.appendChild(foodPlate); 
-
+        
         foodPlate.addEventListener('click',()=>foodsIngredient(strMeal))
     });
     }
 }
 
+//fetching api for meals
 const displayFoodList =()=>{  
     foodList.innerHTML='';
-    fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c="+searchItem.value)
+    fetch("https://www.themealdb.com/api/json/v1/1/search.php?s="+searchItem.value)
     .then(res=>res.json())
-    .then(data=>displayFoods(data))
+    .then(meals=>displayFoods(meals))
 }
 
 searchBtn.addEventListener('click',displayFoodList);
