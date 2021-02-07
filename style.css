@@ -1,11 +1,17 @@
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0;   
+    
+}
+main{
+    
+    background-color: #EDD263;
 }
 #nav{
     max-height: 80px;
     overflow: hidden;
+    background: green;
 }
 .navbar img{
     height: 60px;
@@ -24,17 +30,16 @@
 #food-input{
     height: 100%;
     width: 30%;
-    padding-left:4px;
-    border: 1px solid rgb(238, 230, 230); 
+    padding-left:4px; 
     border-radius: 5%; 
 
 }
 #search-btn{
-    background-color: tomato;
+    background-color: rgb(15, 4, 31);
     width: 8%;
     height: 100%;
-    border: 1px solid rgb(238, 230, 230); 
     border-radius: 5%; 
+    color: white;
 }
 #ingredient{
     display: none;
@@ -44,6 +49,7 @@
     border-radius: 5%;
     overflow: hidden;
     padding: 20px;
+    box-shadow: 5px 5px 5px rgb(240, 189, 233);
 }
 #ingredient img{
     height: 300px;
@@ -51,7 +57,6 @@
     border-radius: 5%;
 }
 #food-list{
-    background-color: rgb(168, 224, 13);
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 15px;
@@ -61,16 +66,17 @@
     margin-top: 20px;
     padding: 0;
     background-color: aliceblue;
-    text-align: center;
-    border: 1px solid gray;
+    text-align: center; 
     border-radius:5%;
+    box-shadow: 5px 5px 5px rgb(3, 3, 44);
     overflow: hidden;
 }
-.foods-img{
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 .food-names{
     padding-top: 20px;
-    color: rgb(18, 4, 56);
+    color: rgb(19, 5, 58);
+    font-size: 1.5rem;
+}
+#ingredient ul li{
+    list-style-type:none;
 }
