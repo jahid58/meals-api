@@ -22,10 +22,9 @@ main{
 }
 #search-box{
     text-align: center;
-    height: 20px;
-    margin-top: 50px;
-    
-   
+    height: 50px;
+    margin-top: 20px;
+    border: none;
 }
 #food-input{
     height: 100%;
