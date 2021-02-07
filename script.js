@@ -25,9 +25,8 @@ const foodsIngredient =(mealName)=>{
      <li>${mealsIngredient.strIngredient4} ${mealsIngredient.strMeasure8}</li>
      <li>${mealsIngredient.strIngredient5} ${mealsIngredient.strMeasure9}</li>
      <li>${mealsIngredient.strIngredient6} ${mealsIngredient.strMeasure10}</li>
-     
      </ul>`
-    })      
+    })   
 }
 
 //displaying foods template
@@ -35,8 +34,8 @@ const displayFoods = (foods) =>{
     ingredientBox.style.display = 'none';
 
     let allFood = foods.meals;
-    if (allFood == null) {
-        foodList.innerHTML =`   <h2> No result found for ${searchItem.value}</h2>`
+    if (allFood == null || searchItem.value == '' ) {
+        foodList.innerHTML = `   <h2> No result found for ${searchItem.value}</h2>`
     } else {
         allFood.forEach(food => {
         let {strMeal} = food;
