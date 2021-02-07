@@ -5,6 +5,7 @@ const foodList = document.getElementById('food-list');
 
 //displaying ingredient 
 const foodsIngredient =(mealName)=>{
+    ingredientBox.innerText = ''
     ingredientBox.style.display = 'block'
     fetch("https://www.themealdb.com/api/json/v1/1/search.php?s="+mealName)
     .then(res =>res.json())
@@ -31,7 +32,6 @@ const foodsIngredient =(mealName)=>{
 
 //displaying foods template
 const displayFoods = (foods) =>{
-    foodList.innerHTML='';
     ingredientBox.style.display = 'none';
 
     let allFood = foods.meals;
