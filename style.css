@@ -22,7 +22,7 @@ main{
 }
 #search-box{
     text-align: center;
-    height: 50px;
+    height: 20px;
     margin-top: 50px;
     
    
@@ -41,7 +41,7 @@ main{
     border-radius: 5%; 
     color: white;
 }
-#ingredient{
+#meal-details{
     display: none;
     width: 40vw;
     background-color: cornsilk;
@@ -51,7 +51,7 @@ main{
     padding: 20px;
     box-shadow: 5px 5px 5px rgb(240, 189, 233);
 }
-#ingredient img{
+#meal-details img{
     height: 300px;
     width: 100%;
     border-radius: 5%;
@@ -77,6 +77,13 @@ main{
     color: rgb(19, 5, 58);
     font-size: 1.5rem;
 }
-#ingredient ul li{
+#meal-details ul li{
     list-style-type:none;
+}
+#all-ul{
+    display: flex;
+    flex-direction: row;
+}
+h4{
+    padding-left: 25px;
 }
